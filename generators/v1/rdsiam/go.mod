@@ -3,8 +3,8 @@ module github.com/external-secrets/external-secrets/generators/v1/rdsiam
 go 1.26.6
 
 require (
-	github.com/aws/aws-sdk-go-v2 v1.43.3
-	github.com/aws/aws-sdk-go-v2/feature/rds/auth v1.6.10
+	github.com/aws/aws-sdk-go-v2 v1.43.7
+	github.com/aws/aws-sdk-go-v2/feature/rds/auth v1.6.38
 	github.com/external-secrets/external-secrets/apis v0.0.0
 	github.com/external-secrets/external-secrets/providers/v1/aws v0.0.0-20251103072335-a9b233b6936f
 	k8s.io/api v0.36.3
@@ -27,7 +27,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sso v1.30.2 // indirect
 	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.35.6 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sts v1.40.1 // indirect
-	github.com/aws/smithy-go v1.27.6 // indirect
+	github.com/aws/smithy-go v1.27.8 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
