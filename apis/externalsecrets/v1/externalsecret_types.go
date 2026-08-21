@@ -650,6 +650,8 @@ type GeneratorRef struct {
 
 	// Specify the Kind of the generator resource
 	// +kubebuilder:validation:Enum=ACRAccessToken;BeyondtrustWorkloadCredentialsDynamicSecret;ClusterGenerator;CloudsmithAccessToken;ECRAuthorizationToken;Fake;GCRAccessToken;GithubAccessToken;GitlabDeployToken;QuayAccessToken;Password;RDSIAMAuthToken;SSHKey;STSSessionToken;UUID;VaultDynamicSecret;Webhook;Grafana;MFA
+	//
+	//nolint:lll // Kubebuilder validation markers cannot be split across multiple lines.
 	Kind string `json:"kind"`
 
 	// Specify the name of the generator resource
