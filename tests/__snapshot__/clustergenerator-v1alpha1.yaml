@@ -191,6 +191,32 @@ spec:
         name: string
         namespace: string
       url: string
+    rdsIAMAuthTokenSpec:
+      auth:
+        jwt:
+          serviceAccountRef:
+            audiences: [] # minItems 0 of type string
+            name: string
+            namespace: string
+        secretRef:
+          accessKeyIDSecretRef:
+            key: string
+            name: string
+            namespace: string
+          secretAccessKeySecretRef:
+            key: string
+            name: string
+            namespace: string
+          sessionTokenSecretRef:
+            key: string
+            name: string
+            namespace: string
+      controller: string
+      hostname: string
+      port: 1
+      region: string
+      role: string
+      username: string
     sshKeySpec:
       comment: string
       keySize: 256
@@ -401,4 +427,4 @@ spec:
           name: string
       timeout: string
       url: string
-  kind: "ACRAccessToken" # "ACRAccessToken", "BeyondtrustWorkloadCredentialsDynamicSecret", "CloudsmithAccessToken", "ECRAuthorizationToken", "Fake", "GCRAccessToken", "GithubAccessToken", "GitlabDeployToken", "QuayAccessToken", "Password", "SSHKey", "STSSessionToken", "UUID", "VaultDynamicSecret", "Webhook", "Grafana", "MFA"
+  kind: "ACRAccessToken" # "ACRAccessToken", "BeyondtrustWorkloadCredentialsDynamicSecret", "CloudsmithAccessToken", "ECRAuthorizationToken", "Fake", "GCRAccessToken", "GithubAccessToken", "GitlabDeployToken", "QuayAccessToken", "Password", "RDSIAMAuthToken", "SSHKey", "STSSessionToken", "UUID", "VaultDynamicSecret", "Webhook", "Grafana", "MFA"

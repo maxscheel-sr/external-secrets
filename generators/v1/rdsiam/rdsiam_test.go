@@ -27,7 +27,6 @@ import (
 	"github.com/aws/aws-sdk-go-v2/aws"
 	v1 "k8s.io/api/core/v1"
 	apiextensions "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	clientfake "sigs.k8s.io/controller-runtime/pkg/client/fake"
 )
@@ -247,10 +246,8 @@ spec:
 				ctx:       context.Background(),
 				namespace: "foobar",
 				kube: clientfake.NewClientBuilder().WithObjects(&v1.Secret{
-					ObjectMeta: metav1.ObjectMeta{
-						Name:      "my-aws-creds",
-						Namespace: "foobar",
-					},
+					Name:      "my-aws-creds",
+					Namespace: "foobar",
 					Data: map[string][]byte{
 						"key-id":        []byte("access-key-id"),
 						"access-secret": []byte("secret-access-key"),
